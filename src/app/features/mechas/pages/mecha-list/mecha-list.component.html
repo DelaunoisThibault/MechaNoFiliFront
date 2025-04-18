@@ -1,1 +1,23 @@
-<p>mecha-list works!</p>
+@if (mechaPage()) {
+
+  <div>
+    @for (mecha of mechas(); track mecha.name) {
+      <div>
+        <p>{{ mecha.name }}</p>
+        <p>{{ mecha.mechaType }}</p>
+      </div>
+    }
+
+    <div *ngIf="totalPages() > 1">
+      <ul class="pagination">
+        <li class="page-item" [class.disabled]="page() === 1">
+          <button class="page-link" (click)="previousPage()">Précédent</button>
+        </li>
+
+        <li class="page-item" [class.disabled]="page() >= totalPages()">
+          <button class="page-link" (click)="nextPage()">Suivant</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+}
