@@ -1,7 +1,32 @@
 <nav>
   <ul>
     <li>
-      <a routerLink="/mechas">Liste des méchas</a>
+      <a [routerLink]="['/mechas']">Liste des méchas</a>
+    </li>
+    <li>
+      <a [routerLink]="['/mechas']">Créer un nouveau mécha</a>
+    </li>
+    <li>
+      <div class="dropdown">
+        <a [routerLink]="['/mechas-components']">Tous les composants <i class="fa fa-caret-down"></i></a>
+        <div class="dropdown-content">
+          <a [routerLink]="['/mechas-components/generators']">Générateurs</a>
+          <a [routerLink]="['/mechas-components/legs']">Jambes</a>
+          <a [routerLink]="['/mechas-components/arms']">Bras</a>
+          <a [routerLink]="['/mechas-components/torsos']">Torses</a>
+          <a [routerLink]="['/mechas-components/heads']">Têtes</a>
+          <a [routerLink]="['/mechas-components/extensions']">Extensions</a>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a [routerLink]="['/mechas-equipments']">Tous les équipements</a>
+    </li>
+    <li>
+      <a [routerLink]="['/mechas-equipments']">Connexion</a>
+    </li>
+    <li>
+      <a [routerLink]="['/mechas-equipments']">Inscription</a>
     </li>
   </ul>
 </nav>
