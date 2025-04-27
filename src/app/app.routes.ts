@@ -15,8 +15,20 @@ export const routes: Routes = [
     loadComponent: () => import('./features/mechas/pages/mecha-list/mecha-list.component').then(m => m.MechaListComponent)
   },
   {
+    path: 'mechas/create',
+    loadComponent: () => import('./features/mechas/component/create/create.component').then(m => m.CreateComponent)
+  },
+  {
+    path: 'mechas/:id',
+    loadComponent: () => import('./features/mechas/pages/mecha-details/mecha-details.component').then(m => m.MechaDetailsComponent)
+  },
+  {
     path: 'mechas-components',
     loadComponent: () => import('./features/mechas-components/pages/mecha-components-list/mecha-components-list.component').then(m => m.MechaComponentsListComponent)
+  },
+  {
+    path: 'mechas-components/specific',
+    loadComponent: () => import('./features/mechas-components/pages/mecha-component-details/mecha-component-details.component').then(m => m.MechaComponentDetailsComponent)
   },
   {
     path: 'mechas-components/arms',
@@ -45,6 +57,18 @@ export const routes: Routes = [
   {
     path: 'mechas-equipments',
     loadComponent: () => import('./features/mechas-equipments/pages/mecha-equipments-list/mecha-equipments-list.component').then(m => m.MechaEquipmentsListComponent)
+  },
+  {
+    path: 'mechas-equipments/specific',
+    loadComponent: () => import('./features/mechas-equipments/pages/mecha-equipment-details/mecha-equipment-details.component').then(m => m.MechaEquipmentDetailsComponent)
+  },
+  {
+    path: 'login',
+    loadComponent: () => import('./features/auth/components/login/login.component').then(m => m.LoginComponent)
+  },
+  {
+    path: 'register',
+    loadComponent: () => import('./features/auth/components/register/register.component').then(m => m.RegisterComponent)
   }
 
 ];

@@ -1,0 +1,15 @@
+<section>
+  <div>
+    <h2>Inscription</h2>
+    <form class="authForm" (ngSubmit)="onSubmit()">
+      <label for="username">Nom d'utilisateur :</label>
+      <input type="text" id="username" [(ngModel)]="username" name="username" required>
+      <label for="email">Email :</label>
+      <input type="text" id="email" [(ngModel)]="email" name="email" required>
+      <label for="password">Mot de passe :</label>
+      <input type="password" id="password" [(ngModel)]="password" name="password" required>
+
+      <button type="submit">S'inscrire</button>
+    </form>
+  </div>
+</section>

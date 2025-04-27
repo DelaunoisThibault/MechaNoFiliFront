@@ -1,0 +1,24 @@
+.mainBox, .infosBox, .statusBox, .mechaBaseInfosBox  {
+  display: flex;
+  gap : 1%;
+}
+
+.infosBox, .mainBox{
+  flex-direction: row;
+}
+
+.mechaBaseInfosBox {
+  width: 30%;
+}
+
+.statusBox {
+  width : 20%;
+}
+
+.picAndButtonBox, .statusBox, .mechaBaseInfosBox  {
+  flex-direction: column;
+}
+
+.infosBox, .infosSubBox {
+  width : 50%;
+}

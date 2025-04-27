@@ -1,12 +1,24 @@
 @if (mechaPage()) {
 <section>
   <div>
+    <div class="titlesMechaBox">
+      <div class="mechaInfosBox">
+        <p>Nom mecha :</p>
+      </div>
+      <div class="mechaInfosBox">
+        <p>Type de mécha :</p>
+      </div>
+    </div>
     @for (mecha of mechas(); track mecha.name) {
       <div class="individualMechaBox">
-        <p>{{ mecha.name }}</p>
-        <p>{{ mecha.mechaType }}</p>
-        <button>Modifier</button>
-        <button>Supprimer</button>
+        <div class="mechaInfosBox">
+          <p>{{ mecha.name }}</p>
+        </div>
+        <div class="mechaInfosBox">
+          <p>{{ mecha.mechaType }}</p>
+        </div>
+        <button class="mechaActionButton updateButton" routerLink="/mechas/{{ mecha.id }}">Voir/Modifier</button>
+        <button class="mechaActionButton deleteButton">Supprimer</button>
       </div>
     }
 

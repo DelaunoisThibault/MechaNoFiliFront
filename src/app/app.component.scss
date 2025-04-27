@@ -1,3 +1,28 @@
-header, nav, main, footer {
-  margin-bottom : 1%;
+@font-face {
+  font-family: "MechaWar";
+  src: url("../../public/assets/fonts/MechaWar.ttf");
 }
+
+header, nav, main, footer {
+  padding : 1%;
+}
+
+main {
+  color : #fff;
+  min-height: 50vh;
+}
+
+header, footer {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background-image: url("../../public/assets/img/metallic_steel_background.jpg");
+  padding : 1%;
+}
+
+nav {
+  background-color: #1b1b20;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "MechaWar", "Bitstream Vera Serif", serif;
+}
+

@@ -1,1 +1,21 @@
-<p>create works!</p>
+<section>
+  <div class="formBox">
+    <h2>Créer un nouveau mécha</h2>
+    <form class="emptyMechaForm" (ngSubmit)="onSubmit()">
+      <label for="mechaName">Nom du mécha :</label>
+      <input type="text" id="mechaName" [(ngModel)]="mechaName" name="mechaName">
+
+        <legend>Choisissez l'usage du mécha : </legend>
+        <div>
+          <input type="radio" id="worker" name="drone" value="worker" checked />
+          <label for="worker">Travail/Chantier</label>
+        </div>
+        <div>
+          <input type="radio" id="fighter" name="drone" value="fighter" />
+          <label for="fighter">Combat</label>
+        </div>
+
+      <button type="submit">Créer</button>
+    </form>
+  </div>
+</section>

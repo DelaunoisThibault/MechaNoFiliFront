@@ -3,11 +3,13 @@ import {MechaDtoModel} from '../../models/mecha-dto.model';
 import {MechaService} from '../../services/mecha.service';
 import {MechaPageModel} from '../../models/mecha-page.model';
 import {NgIf} from '@angular/common';
+import {Router, RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-mecha-list',
   imports: [
-    NgIf
+    NgIf,
+    RouterLink
   ],
   templateUrl: './mecha-list.component.html',
   styleUrl: './mecha-list.component.scss'
@@ -20,7 +22,8 @@ export class MechaListComponent {
   totalPages: Signal<number> = computed(() => this.mechaPage()!.totalPages);
 
   constructor(
-    private mechaService : MechaService
+    private mechaService : MechaService,
+    private router: Router,
   ) {
     this.mechaService.getAllMechas().subscribe((data) => {
       this.mechaPage.set(data);
@@ -40,5 +43,6 @@ export class MechaListComponent {
       this.mechaPage.set(data);
     });
   }
+
 
 }

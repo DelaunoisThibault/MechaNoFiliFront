@@ -1,0 +1,16 @@
+.formBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.emptyMechaForm {
+  display: flex;
+  flex-direction: column;
+  gap : 0.5rem;
+  min-width : 50%;
+  align-items: center;
+}
+
+#mechaName {
+  min-width : 30%;
+}

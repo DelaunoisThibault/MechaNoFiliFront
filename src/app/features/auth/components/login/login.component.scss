@@ -1,0 +1,12 @@
+.authForm {
+  display: flex;
+  flex-direction: column;
+  gap : 0.5rem;
+  min-width : 50%;
+  align-items: center;
+}
+
+#password, #email {
+  min-width : 30%;
+}
+
