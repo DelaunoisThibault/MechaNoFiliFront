@@ -1,0 +1,32 @@
+.mainBox, .infosAndCommentsBox, .commentBox, .picAndButtonBox  {
+  display: flex;
+  gap : 1%;
+}
+
+.mainBox, .commentBox{
+  flex-direction: row;
+}
+
+.picAndButtonBox {
+  width : 40%;
+}
+
+.infosAndCommentsBox, .picAndButtonBox  {
+  flex-direction: column;
+}
+
+.infosAndCommentsBox {
+  width : 60%;
+}
+
+.userInfoBox {
+  width : 20%;
+}
+
+.commentContent {
+  width : 80%;
+}
+
+.equipmentImg {
+  max-width : 300px;
+}

@@ -3,6 +3,7 @@ import {HttpClient, HttpParams} from '@angular/common/http';
 import {MechaDtoModel} from '../models/mecha-dto.model';
 import {environment} from '../../../../environments/environment';
 import {MechaPageModel} from '../models/mecha-page.model';
+import {MechaDetailsComponent} from '../pages/mecha-details/mecha-details.component';
 
 @Injectable({
   providedIn: 'root'
@@ -20,4 +21,9 @@ export class MechaService {
       .set('size', size);
     return this._http.get<MechaPageModel>(`${environment.API_URL}/mecha`, {params});
   }
+
+  public findMechaByID(id: number) {
+    return this._http.get<MechaDtoModel>(`${environment.API_URL}/mecha/${id}`);
+  }
+
 }

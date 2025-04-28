@@ -39,6 +39,10 @@ export const routes: Routes = [
     loadComponent: () => import('./features/mechas-components/pages/mecha-components-legs-list/mecha-components-legs-list.component').then(m => m.MechaComponentsLegsListComponent)
   },
   {
+    path: 'mechas-components/legs/:id',
+    loadComponent: () => import('./features/mechas-components/pages/mecha-components-legs-details/mecha-components-legs-details.component').then(m => m.MechaComponentsLegsDetailsComponent)
+  },
+  {
     path: 'mechas-components/heads',
     loadComponent: () => import('./features/mechas-components/pages/mecha-components-heads-list/mecha-components-heads-list.component').then(m => m.MechaComponentsHeadsListComponent)
   },
@@ -59,7 +63,7 @@ export const routes: Routes = [
     loadComponent: () => import('./features/mechas-equipments/pages/mecha-equipments-list/mecha-equipments-list.component').then(m => m.MechaEquipmentsListComponent)
   },
   {
-    path: 'mechas-equipments/specific',
+    path: 'mechas-equipments/:id',
     loadComponent: () => import('./features/mechas-equipments/pages/mecha-equipment-details/mecha-equipment-details.component').then(m => m.MechaEquipmentDetailsComponent)
   },
   {

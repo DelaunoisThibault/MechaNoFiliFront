@@ -9,36 +9,18 @@
         <th>Force (poids max supporté)</th>
         <th>Type</th>
       </tr>
-      <tr>
-        <td><a [routerLink]="['/mechas-components/specific']">Nom jambes 1</a></td>
-        <td>Léger</td>
-        <td>480</td>
-        <td>160</td>
-        <td>3000</td>
-        <td>Jambes à propulsion</td>
-        <td><button class="addButton">Ajouter</button></td>
-        <td><button class="removeButton">Retirer</button></td>
-      </tr>
-      <tr>
-        <td><a [routerLink]="['/mechas-components/specific']">Nom jambes 2</a></td>
-        <td>Moyen</td>
-        <td>1300</td>
-        <td>120</td>
-        <td>4500</td>
-        <td>Jambes à saut rapide</td>
-        <td><button class="addButton">Ajouter</button></td>
-        <td><button class="removeButton">Retirer</button></td>
-      </tr>
-      <tr>
-        <td><a [routerLink]="['/mechas-components/specific']">Nom jambes 3</a></td>
-        <td>Lourd</td>
-        <td>2000</td>
-        <td>190</td>
-        <td>6000</td>
-        <td>Jambes à roulements</td>
-        <td><button class="addButton">Ajouter</button></td>
-        <td><button class="removeButton">Retirer</button></td>
-      </tr>
+      @for (legsComponent of legsComponents(); track legsComponent.name) {
+        <tr>
+          <td><a routerLink="/mechas-components/legs/{{legsComponent.id}}">{{legsComponent.name}}</a></td>
+          <td>{{legsComponent.weightCategory}}</td>
+          <td>{{legsComponent.weight}}</td>
+          <td>{{legsComponent.powerConsumption}}</td>
+          <td>{{legsComponent.loadLimit}}</td>
+          <td>{{legsComponent.type}}</td>
+          <td><button class="addButton">Ajouter</button></td>
+          <td><button class="removeButton">Retirer</button></td>
+        </tr>
+      }
     </table>
   </div>
 </section>

@@ -1,10 +1,9 @@
 <section>
   <div class="mainBox">
-
     <div class="picAndButtonBox">
-      <h2>{{mechaEquipment.name}}</h2>
+      <h2>{{legsComponent.name}}</h2>
       <div>
-        <img class="equipmentImg" [src]="mechaEquipment.imageUrl"   alt="imagePartieMécha">
+        <img class="equipmentImg" [src]=" legsComponent.imageUrl " alt="imagePartieMécha">
       </div>
       <div>
         <button>Ajouter au mécha</button>
@@ -12,14 +11,18 @@
     </div>
     <div class="infosAndCommentsBox">
       <div>
-        <h4>Poids équipement : </h4>
-        <p>{{mechaEquipment.weight}}</p>
-        <h4>Type d'équipement : </h4>
-        <p>{{mechaEquipment.equipmentType}}</p>
+        <h4>Catégorie de poids : </h4>
+        <p>{{legsComponent.weightCategory}}</p>
+        <h4>Poids composant : </h4>
+        <p>{{legsComponent.weight}}</p>
+        <h4>Poids supporté : </h4>
+        <p>{{legsComponent.loadLimit}}</p>
         <h4>Consommation énergétique : </h4>
-        <p>{{mechaEquipment.powerConsumption}}</p>
+        <p>{{legsComponent.powerConsumption}}</p>
         <h4>Durabilité : </h4>
-        <p>{{mechaEquipment.durability}}</p>
+        <p>{{legsComponent.durability}}</p>
+        <h4>Type : </h4>
+        <p>{{legsComponent.type}}</p>
       </div>
       <div class="commentBox">
         <div class="userInfoBox">
